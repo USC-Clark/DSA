@@ -59,7 +59,7 @@ List insertSorted(List L, int data){
             if(L.elem[i+1]==-1){
                 L.elem[i+1] = data;
             }else if(L.elem[i+1]!=-1){
-                for(int j=i;)
+                // for(int j=i;)
             }
         }
     }
