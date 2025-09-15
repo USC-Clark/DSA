@@ -44,7 +44,7 @@ void insertFirst(int* L, VHeap* V, int elem){
     if(newCell != -1){
         V->H[newCell].elem = elem;
         V->H[newCell].next = *L;
-        printf("%d", V->H[newCell].elem);
+        //printf("%d", V->H[newCell].elem);
     }
     *L = newCell;
 }
@@ -58,11 +58,11 @@ void display(int L, VHeap V){
     int trav = L;
 
     while(trav != -1){
-        trav = V.H[trav].next;
         printf("%d ", V.H[trav].elem);
+        trav = V.H[trav].next;
     }
 
-    printf("Working");
+    //printf("Working");
 }
 
 int main(){
@@ -72,7 +72,8 @@ int main(){
 
     initialize(&v);
     insertFirst(&l, &v, 5);
-    //display(l,v);
+    insertFirst(&l, &v, 10);
+    display(l,v);
 
     //insertFirst()
 
